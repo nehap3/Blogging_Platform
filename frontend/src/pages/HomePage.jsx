@@ -65,7 +65,11 @@ const HomePage = () => {
                         <div key={blog._id} className="card" style={{ padding: "0", overflow: "hidden", display: "flex", flexDirection: "column", background: "white" }}>
                             {blog.images && blog.images.length > 0 && isGridView && (
                                 <div style={{ borderBottom: "3px solid black" }}>
-                                    <img src={blog.images[0]} alt={blog.title} style={{ width: "100%", height: "220px", objectFit: "cover" }} />
+                                    <img
+                                        src={blog.images[0].startsWith("http") ? blog.images[0] : `${import.meta.env.VITE_API_URL || "http://localhost:5000"}${blog.images[0]}`}
+                                        alt={blog.title}
+                                        style={{ width: "100%", height: "220px", objectFit: "cover" }}
+                                    />
                                 </div>
                             )}
                             <div style={{ padding: "24px", flex: "1", display: "flex", flexDirection: "column" }}>

@@ -76,7 +76,11 @@ const BlogPage = () => {
                 By {blog.author?.name} | {new Date(blog.createdAt).toLocaleDateString()}
             </p>
             {blog.images && blog.images.length > 0 && (
-                <img src={blog.images[0]} alt={blog.title} style={{ maxWidth: "100%", maxHeight: "400px" }} />
+                <img
+                    src={blog.images[0].startsWith("http") ? blog.images[0] : `${import.meta.env.VITE_API_URL || "http://localhost:5000"}${blog.images[0]}`}
+                    alt={blog.title}
+                    style={{ maxWidth: "100%", maxHeight: "400px" }}
+                />
             )}
             <div dangerouslySetInnerHTML={{ __html: blog.content }} style={{ marginTop: "20px" }}></div>
 

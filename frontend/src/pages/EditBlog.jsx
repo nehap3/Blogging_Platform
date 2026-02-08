@@ -71,7 +71,7 @@ const EditBlog = () => {
                         className="form-control"
                         onChange={uploadFileHandler}
                     />
-                    {image && <img src={image} alt="Preview" style={{ width: "100%", marginTop: "10px" }} />}
+                    {image && <img src={image.startsWith("http") ? image : `${import.meta.env.VITE_API_URL || "http://localhost:5000"}${image}`} alt="Preview" style={{ width: "100%", marginTop: "10px" }} />}
                 </div>
                 <div className="form-group">
                     <label>Content</label>
