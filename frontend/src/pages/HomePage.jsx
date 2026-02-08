@@ -73,13 +73,13 @@ const HomePage = () => {
                                 </div>
                             )}
                             <div style={{ padding: "24px", flex: "1", display: "flex", flexDirection: "column" }}>
-                                <div style={{ marginBottom: "10px", display: "inline-block", background: "var(--primary-color)", border: "2px solid black", padding: "2px 8px", borderRadius: "20px", fontSize: "0.85rem", fontWeight: "bold", textTransform: "uppercase" }}>
+                                <div style={{ marginBottom: "10px", display: "inline-block", background: "var(--primary-color)", color: "black", border: "2px solid black", padding: "2px 8px", borderRadius: "20px", fontSize: "0.85rem", fontWeight: "bold", textTransform: "uppercase" }}>
                                     {blog.category || "Random"}
                                 </div>
-                                <Link to={`/blog/${blog._id}`} style={{ display: "block", marginBottom: "10px" }}>
+                                <Link to={`/blog/${blog._id}`} style={{ display: "block", marginBottom: "10px", color: "white" }}>
                                     <h2 style={{ fontSize: "1.8rem", lineHeight: "1.1" }}>{blog.title}</h2>
                                 </Link>
-                                <p style={{ fontSize: "1.1rem", lineHeight: "1.5", flex: "1", marginBottom: "20px" }}>
+                                <p style={{ fontSize: "1.1rem", lineHeight: "1.5", flex: "1", marginBottom: "20px", color: "white" }}>
                                     {blog.content.replace(/<[^>]+>/g, '').substring(0, 100)}...
                                 </p>
                                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "3px solid black", paddingTop: "15px", marginTop: "auto" }}>
