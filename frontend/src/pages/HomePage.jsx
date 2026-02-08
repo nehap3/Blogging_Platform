@@ -62,7 +62,7 @@ const HomePage = () => {
                     marginTop: "20px"
                 }}>
                     {blogs.map((blog) => (
-                        <div key={blog._id} className="card" style={{ padding: "0", overflow: "hidden", display: "flex", flexDirection: "column", background: "white" }}>
+                        <div key={blog._id} className="card" style={{ padding: "0", overflow: "hidden", display: "flex", flexDirection: "column", background: "black", border: "3px solid white", color: "white" }}>
                             {blog.images && blog.images.length > 0 && isGridView && (
                                 <div style={{ borderBottom: "3px solid black" }}>
                                     <img
