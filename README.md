@@ -2,6 +2,9 @@
 
 A full-featured blogging platform built with the MERN stack (MongoDB, Express, React, Node.js). Users can read, write, edit, and delete blogs, manage their profiles, and comment on posts. Includes an Admin Dashboard for managing users and content.
 
+## 🚀 Live Demo
+Check out the live application here: [https://blogging-platform-w2pq.vercel.app/](https://blogging-platform-w2pq.vercel.app/)
+
 ## 🚀 Features
 
 - **User Authentication**: Secure Login/Register with JWT & Cookies.
